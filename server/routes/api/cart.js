@@ -29,7 +29,7 @@ router.post('/add', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -43,7 +43,7 @@ router.delete('/delete/:cartId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -60,7 +60,7 @@ router.post('/add/:cartId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -77,7 +77,7 @@ router.delete('/delete/:cartId/:productId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });

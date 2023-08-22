@@ -18,12 +18,12 @@ router.post('/add', auth, async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `Address has been added successfully!`,
+      message: `Địa chỉ đã được thêm thành công!`,
       address: addressDoc
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -38,7 +38,7 @@ router.get('/', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -51,7 +51,7 @@ router.get('/:id', async (req, res) => {
 
     if (!addressDoc) {
       res.status(404).json({
-        message: `Cannot find Address with the id: ${addressId}.`
+        message: `Không thể tìm thấy Địa chỉ với id: ${addressId}.`
       });
     }
 
@@ -60,7 +60,7 @@ router.get('/:id', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại'
     });
   }
 });
@@ -77,11 +77,11 @@ router.put('/:id', async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'Address has been updated successfully!'
+      message: 'Địa chỉ đã được cập nhật thành công!'
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại'
     });
   }
 });
@@ -92,12 +92,12 @@ router.delete('/delete/:id', async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `Address has been deleted successfully!`,
+      message: `Địa chỉ đã được xóa thành công!`,
       address
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại'
     });
   }
 });

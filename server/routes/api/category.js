@@ -18,7 +18,7 @@ router.post('/add', auth, role.check(ROLES.Admin), (req, res) => {
   if (!description || !name) {
     return res
       .status(400)
-      .json({ error: 'You must enter description & name.' });
+      .json({ error: 'Bạn phải nhập mô tả & tên.' });
   }
 
   const category = new Category({
@@ -31,13 +31,13 @@ router.post('/add', auth, role.check(ROLES.Admin), (req, res) => {
   category.save((err, data) => {
     if (err) {
       return res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
 
     res.status(200).json({
       success: true,
-      message: `Category has been added successfully!`,
+      message: `Danh mục đã được thêm thành công!`,
       category: data
     });
   });
@@ -52,7 +52,7 @@ router.get('/list', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -66,7 +66,7 @@ router.get('/', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -83,7 +83,7 @@ router.get('/:id', async (req, res) => {
 
     if (!categoryDoc) {
       return res.status(404).json({
-        message: 'No Category found.'
+        message: 'Không tìm thấy danh mục nào.'
       });
     }
 
@@ -92,7 +92,7 @@ router.get('/:id', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -118,11 +118,11 @@ router.put('/:id', auth, role.check(ROLES.Admin), async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'Category has been updated successfully!'
+      message: 'Danh mục đã được cập nhật thành công!'
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -149,11 +149,11 @@ router.put('/:id/active', auth, role.check(ROLES.Admin), async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'Category has been updated successfully!'
+      message: 'Danh mục đã được cập nhật thành công!'
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -168,12 +168,12 @@ router.delete(
 
       res.status(200).json({
         success: true,
-        message: `Category has been deleted successfully!`,
+        message: `Danh mục đã được xóa thành công!`,
         product
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }

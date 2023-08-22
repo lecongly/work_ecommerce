@@ -23,23 +23,23 @@ router.post('/login', async (req, res) => {
     if (!email) {
       return res
         .status(400)
-        .json({ error: 'You must enter an email address.' });
+        .json({ error: 'Bạn phải nhập địa chỉ email.' });
     }
 
     if (!password) {
-      return res.status(400).json({ error: 'You must enter a password.' });
+      return res.status(400).json({ error: 'Bạn phải nhập mật khẩu.' });
     }
 
     const user = await User.findOne({ email });
     if (!user) {
       return res
         .status(400)
-        .send({ error: 'No user found for this email address.' });
+        .send({ error: 'Không tìm thấy người dùng nào cho địa chỉ email này.' });
     }
 
     if (user && user.provider !== EMAIL_PROVIDER.Email) {
       return res.status(400).send({
-        error: `That email address is already in use using ${user.provider} provider.`
+        error: `Địa chỉ email đó đã được sử dụng bằng nhà cung cấp ${user.provider} .`
       });
     }
 
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
     if (!isMatch) {
       return res.status(400).json({
         success: false,
-        error: 'Password Incorrect'
+        error: 'Mật khẩu không đúng'
       });
     }
 
@@ -75,7 +75,7 @@ router.post('/login', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -87,15 +87,15 @@ router.post('/register', async (req, res) => {
     if (!email) {
       return res
         .status(400)
-        .json({ error: 'You must enter an email address.' });
+        .json({ error: 'Bạn phải nhập địa chỉ email.' });
     }
 
     if (!firstName || !lastName) {
-      return res.status(400).json({ error: 'You must enter your full name.' });
+      return res.status(400).json({ error: 'Bạn phải nhập tên đầy đủ của bạn.' });
     }
 
     if (!password) {
-      return res.status(400).json({ error: 'You must enter a password.' });
+      return res.status(400).json({ error: 'Bạn phải nhập mật khẩu.' });
     }
 
     const existingUser = await User.findOne({ email });
@@ -103,7 +103,7 @@ router.post('/register', async (req, res) => {
     if (existingUser) {
       return res
         .status(400)
-        .json({ error: 'That email address is already in use.' });
+        .json({ error: 'Địa chỉ email đó đã được sử dụng.' });
     }
 
     let subscribed = false;
@@ -155,7 +155,7 @@ router.post('/register', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -167,7 +167,7 @@ router.post('/forgot', async (req, res) => {
     if (!email) {
       return res
         .status(400)
-        .json({ error: 'You must enter an email address.' });
+        .json({ error: 'Bạn phải nhập địa chỉ email.' });
     }
 
     const existingUser = await User.findOne({ email });
@@ -175,7 +175,7 @@ router.post('/forgot', async (req, res) => {
     if (!existingUser) {
       return res
         .status(400)
-        .send({ error: 'No user found for this email address.' });
+        .send({ error: 'Không tìm thấy người dùng nào cho địa chỉ email này.' });
     }
 
     const buffer = crypto.randomBytes(48);
@@ -195,11 +195,11 @@ router.post('/forgot', async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'Please check your email for the link to reset your password.'
+      message: 'Vui lòng kiểm tra email của bạn để tìm liên kết để đặt lại mật khẩu của bạn.'
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -209,7 +209,7 @@ router.post('/reset/:token', async (req, res) => {
     const { password } = req.body;
 
     if (!password) {
-      return res.status(400).json({ error: 'You must enter a password.' });
+      return res.status(400).json({ error: 'Bạn phải nhập mật khẩu.' });
     }
 
     const resetUser = await User.findOne({
@@ -220,7 +220,7 @@ router.post('/reset/:token', async (req, res) => {
     if (!resetUser) {
       return res.status(400).json({
         error:
-          'Your token has expired. Please attempt to reset your password again.'
+          'Mã thông báo của bạn đã hết hạn. Vui lòng thử đặt lại mật khẩu của bạn một lần nữa.'
       });
     }
 
@@ -238,11 +238,11 @@ router.post('/reset/:token', async (req, res) => {
     res.status(200).json({
       success: true,
       message:
-        'Password changed successfully. Please login with your new password.'
+        'Mật khẩu đã thay đổi thành công. Vui lòng đăng nhập bằng mật khẩu mới của bạn.'
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -257,14 +257,14 @@ router.post('/reset', auth, async (req, res) => {
     }
 
     if (!password) {
-      return res.status(400).json({ error: 'You must enter a password.' });
+      return res.status(400).json({ error: 'Bạn phải nhập mật khẩu.' });
     }
 
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
       return res
         .status(400)
-        .json({ error: 'That email address is already in use.' });
+        .json({ error: 'Địa chỉ email đó đã được sử dụng.' });
     }
 
     const isMatch = await bcrypt.compare(password, existingUser.password);
@@ -272,7 +272,7 @@ router.post('/reset', auth, async (req, res) => {
     if (!isMatch) {
       return res
         .status(400)
-        .json({ error: 'Please enter your correct old password.' });
+        .json({ error: 'Vui lòng nhập đúng mật khẩu cũ của bạn.' });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -285,11 +285,11 @@ router.post('/reset', auth, async (req, res) => {
     res.status(200).json({
       success: true,
       message:
-        'Password changed successfully. Please login with your new password.'
+        'Mật khẩu đã thay đổi thành công. Vui lòng đăng nhập bằng mật khẩu mới của bạn.'
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });

@@ -20,12 +20,12 @@ router.post('/add', auth, async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `Your review has been added successfully and will appear when approved!`,
+      message: `Đánh giá của bạn đã được thêm thành công và sẽ xuất hiện khi được phê duyệt!`,
       review: reviewDoc
     });
   } catch (error) {
     return res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -59,7 +59,7 @@ router.get('/', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -73,7 +73,7 @@ router.get('/:slug', async (req, res) => {
 
     if (!productDoc || hasNoBrand) {
       return res.status(404).json({
-        message: 'No product found.'
+        message: 'Không tìm thấy sản phẩm.'
       });
     }
 
@@ -92,7 +92,7 @@ router.get('/:slug', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -109,11 +109,11 @@ router.put('/:id', async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'review has been updated successfully!'
+      message: 'Đánh giá đã được cập nhật thành công!'
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -138,7 +138,7 @@ router.put('/approve/:reviewId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -162,7 +162,7 @@ router.put('/reject/:reviewId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -173,12 +173,12 @@ router.delete('/delete/:id', async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `review has been deleted successfully!`,
+      message: `Đánh giá đã được xóa thành công!`,
       review
     });
   } catch (error) {
     return res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
