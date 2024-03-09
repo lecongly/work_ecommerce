@@ -1,7 +1,8 @@
 /**
  *
  * index.js
- * This is the entry file for the application
+ * ádasd
+ * 
  */
 
 import React from 'react';
