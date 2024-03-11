@@ -234,7 +234,8 @@ router.get('/list/brand/:slug', async (req, res) => {
     }
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Your request could not be processed. Please try again.',
+      message: error
     });
   }
 });
