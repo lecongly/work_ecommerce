@@ -65,27 +65,17 @@ const Footer = () => {
           </div>
         </div>
         <div className='footer-copyright'>
-          <span>© {new Date().getFullYear()} MERN Store</span>
+          <span>© {new Date().getFullYear()} Stella Store</span>
         </div>
         <ul className='footer-social-item'>
           <li>
-            <a href='/#facebook' rel='noreferrer noopener' target='_blank'>
+            <a href='https://www.facebook.com/profile.php?id=61557173369935' rel='noreferrer noopener' target='_blank'>
               <span className='facebook-icon' />
             </a>
           </li>
           <li>
-            <a href='/#instagram' rel='noreferrer noopener' target='_blank'>
+            <a href='https://www.instagram.com/stella_nailboxdanang/' rel='noreferrer noopener' target='_blank'>
               <span className='instagram-icon' />
-            </a>
-          </li>
-          <li>
-            <a href='/#pinterest' rel='noreferrer noopener' target='_blank'>
-              <span className='pinterest-icon' />
-            </a>
-          </li>
-          <li>
-            <a href='/#twitter' rel='noreferrer noopener' target='_blank'>
-              <span className='twitter-icon' />
             </a>
           </li>
         </ul>
