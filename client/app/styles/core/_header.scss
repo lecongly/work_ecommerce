@@ -1,24 +1,36 @@
 // header styles
 .header-info {
   padding: 10px 0px;
-  background-color: $theme-light-black;
+  background-color: #FC6C85;
 
   .fa,
   span {
     color: $white;
-    font-size: $font-size-medium !important;
+    font-size: $font-size-large !important;
     font-weight: $font-weight-normal;
     margin: 0px 5px;
   }
 }
 
 .header {
-  background-color: $white;
+  background-color: #FFFBFA;
   border-bottom: $border-primary;
-
-  .logo {
-    font-size: $font-size-heading-large !important;
-    font-weight: $font-weight-normal;
+  .desktop {
+    width: 80%;
+    height: 80%;
+  }
+  .mobile {
+    display: none;
+  }
+  @media (max-width: 600px) {
+    .mobile {
+      display: block;
+      width: 0%;
+      height: 0%;
+    }
+    .desktop {
+      display: none;
+    }
   }
 }
 
@@ -144,10 +156,8 @@
     }
 
     .logo {
-      margin: 0px;
-      color: $font-custom-color !important;
       @include media-breakpoint-up(md) {
-        margin-left: 15px;
+      margin-left: 35px;
       }
     }
   }
