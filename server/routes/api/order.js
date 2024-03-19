@@ -44,12 +44,12 @@ router.post('/add', auth, async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `Your order has been placed successfully!`,
+      message: `Đơn đặt hàng của bạn đã được đặt thành công!`,
       order: { _id: orderDoc._id }
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -119,7 +119,7 @@ router.get('/search', auth, async (req, res) => {
     }
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -154,7 +154,7 @@ router.get('/', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -192,7 +192,7 @@ router.get('/me', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -229,7 +229,7 @@ router.get('/:orderId', auth, async (req, res) => {
 
     if (!orderDoc || !orderDoc.cart) {
       return res.status(404).json({
-        message: `Cannot find order with the id: ${orderId}.`
+        message: `Không thể tìm thấy đơn đặt hàng với id: ${orderId}.`
       });
     }
 
@@ -249,7 +249,7 @@ router.get('/:orderId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -271,7 +271,7 @@ router.delete('/cancel/:orderId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -312,15 +312,14 @@ router.put('/status/item/:itemId', auth, async (req, res) => {
         return res.status(200).json({
           success: true,
           orderCancelled: true,
-          message: `${
-            req.user.role === ROLES.Admin ? 'Order' : 'Your order'
-          } has been cancelled successfully`
+          message: `${req.user.role === ROLES.Admin ? 'Order' : 'Đơn hàng của bạn'
+            } đã được hủy bỏ thành công. `
         });
       }
 
       return res.status(200).json({
         success: true,
-        message: 'Item has been cancelled successfully!'
+        message: 'Mặt hàng đã được hủy thành công!'
       });
     }
 
@@ -330,7 +329,7 @@ router.put('/status/item/:itemId', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });

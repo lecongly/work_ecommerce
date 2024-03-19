@@ -19,7 +19,7 @@ router.post('/add', auth, role.check(ROLES.Admin), async (req, res) => {
     if (!description || !name) {
       return res
         .status(400)
-        .json({ error: 'You must enter description & name.' });
+        .json({ error: 'Bạn phải nhập mô tả & tên.' });
     }
 
     const brand = new Brand({
@@ -32,12 +32,12 @@ router.post('/add', auth, role.check(ROLES.Admin), async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `Brand has been added successfully!`,
+      message: `Thương hiệu đã được thêm thành công!`,
       brand: brandDoc
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -54,7 +54,7 @@ router.get('/list', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -81,7 +81,7 @@ router.get(
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -98,7 +98,7 @@ router.get('/:id', async (req, res) => {
 
     if (!brandDoc) {
       return res.status(404).json({
-        message: `Cannot find brand with the id: ${brandId}.`
+        message: `Không thể tìm thấy Brand có id: ${brandId}.`
       });
     }
 
@@ -107,7 +107,7 @@ router.get('/:id', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -136,7 +136,7 @@ router.get(
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -158,7 +158,7 @@ router.put(
       });
 
       if (foundBrand && foundBrand._id != brandId) {
-        return res.status(400).json({ error: 'Slug is already in use.' });
+        return res.status(400).json({ error: 'Slug đã được sử dụng' });
       }
 
       await Brand.findOneAndUpdate(query, update, {
@@ -167,11 +167,11 @@ router.put(
 
       res.status(200).json({
         success: true,
-        message: 'Brand has been updated successfully!'
+        message: 'Thương hiệu đã được cập nhật thành công!'
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -199,11 +199,11 @@ router.put(
 
       res.status(200).json({
         success: true,
-        message: 'Brand has been updated successfully!'
+        message: 'Thương hiệu đã được cập nhật thành công!'
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -221,12 +221,12 @@ router.delete(
 
       res.status(200).json({
         success: true,
-        message: `Brand has been deleted successfully!`,
+        message: `Thương hiệu đã được xóa thành công!`,
         brand
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }

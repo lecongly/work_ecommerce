@@ -23,7 +23,7 @@ router.post('/', auth, async (req, res) => {
     if (updatedWishlist !== null) {
       res.status(200).json({
         success: true,
-        message: 'Your Wishlist has been updated successfully!',
+        message: 'Danh sách yêu thích của bạn đã được cập nhật thành công!',
         wishlist: updatedWishlist
       });
     } else {
@@ -37,13 +37,13 @@ router.post('/', auth, async (req, res) => {
 
       res.status(200).json({
         success: true,
-        message: `Added to your Wishlist successfully!`,
+        message: `Đã thêm vào danh sách yêu thích của bạn thành công!`,
         wishlist: wishlistDoc
       });
     }
   } catch (e) {
     return res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -65,7 +65,7 @@ router.get('/', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });

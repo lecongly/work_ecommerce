@@ -37,7 +37,7 @@ router.get('/item/:slug', async (req, res) => {
 
     if (!productDoc || hasNoBrand) {
       return res.status(404).json({
-        message: 'No product found.'
+        message: 'Không tìm thấy sản phẩm.'
       });
     }
 
@@ -46,7 +46,7 @@ router.get('/item/:slug', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -63,7 +63,7 @@ router.get('/list/search/:name', async (req, res) => {
 
     if (productDoc.length < 0) {
       return res.status(404).json({
-        message: 'No product found.'
+        message: 'Không tìm thấy sản phẩm.'
       });
     }
 
@@ -72,7 +72,7 @@ router.get('/list/search/:name', async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -142,7 +142,7 @@ router.get('/list', async (req, res) => {
   } catch (error) {
     console.log('error', error);
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -156,7 +156,7 @@ router.get('/list/brand/:slug', async (req, res) => {
 
     if (!brand) {
       return res.status(404).json({
-        message: `Cannot find brand with the slug: ${slug}.`
+        message: `Không thể tìm thấy thương hiệu với slug: ${slug}.`
       });
     }
 
@@ -234,7 +234,7 @@ router.get('/list/brand/:slug', async (req, res) => {
     }
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.',
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.',
       message: error
     });
   }
@@ -249,7 +249,7 @@ router.get('/list/select', auth, async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      error: 'Your request could not be processed. Please try again.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
     });
   }
 });
@@ -273,27 +273,27 @@ router.post(
       const image = req.file;
 
       if (!sku) {
-        return res.status(400).json({ error: 'You must enter sku.' });
+        return res.status(400).json({ error: 'Bạn phải nhập sku.' });
       }
 
       if (!description || !name) {
         return res
           .status(400)
-          .json({ error: 'You must enter description & name.' });
+          .json({ error: 'Bạn phải nhập mô tả & tên.' });
       }
 
       if (!quantity) {
-        return res.status(400).json({ error: 'You must enter a quantity.' });
+        return res.status(400).json({ error: 'Bạn phải nhập một số lượng.' });
       }
 
       if (!price) {
-        return res.status(400).json({ error: 'You must enter a price.' });
+        return res.status(400).json({ error: 'Bạn phải nhập giá.' });
       }
 
       const foundProduct = await Product.findOne({ sku });
 
       if (foundProduct) {
-        return res.status(400).json({ error: 'This sku is already in use.' });
+        return res.status(400).json({ error: 'Sku này đã được sử dụng.' });
       }
 
       const { imageUrl, imageKey } = await s3Upload(image);
@@ -315,12 +315,12 @@ router.post(
 
       res.status(200).json({
         success: true,
-        message: `Product has been added successfully!`,
+        message: `Sản phẩm đã được thêm thành công!`,
         product: savedProduct
       });
     } catch (error) {
       return res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -366,7 +366,7 @@ router.get(
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -405,7 +405,7 @@ router.get(
 
       if (!productDoc) {
         return res.status(404).json({
-          message: 'No product found.'
+          message: 'Không thể tìm thấy sản phẩm.'
         });
       }
 
@@ -414,7 +414,7 @@ router.get(
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -438,7 +438,7 @@ router.put(
       if (foundProduct && foundProduct._id != productId) {
         return res
           .status(400)
-          .json({ error: 'Sku or slug is already in use.' });
+          .json({ error: 'Sku hoặc slug đã được sử dụng.' });
       }
 
       await Product.findOneAndUpdate(query, update, {
@@ -447,11 +447,11 @@ router.put(
 
       res.status(200).json({
         success: true,
-        message: 'Product has been updated successfully!'
+        message: 'Sản phẩm đã được cập nhật thành công!'
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -473,11 +473,11 @@ router.put(
 
       res.status(200).json({
         success: true,
-        message: 'Product has been updated successfully!'
+        message: 'Sản phẩm đã được cập nhật thành công!'
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
@@ -493,12 +493,12 @@ router.delete(
 
       res.status(200).json({
         success: true,
-        message: `Product has been deleted successfully!`,
+        message: `Sản phẩm đã được xóa thành công!`,
         product
       });
     } catch (error) {
       res.status(400).json({
-        error: 'Your request could not be processed. Please try again.'
+        error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
       });
     }
   }
