@@ -234,7 +234,8 @@ router.get('/list/brand/:slug', async (req, res) => {
     }
   } catch (error) {
     res.status(400).json({
-      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.',
+      message: error
     });
   }
 });
