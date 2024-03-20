@@ -10,8 +10,8 @@ import { Card, CardBody, CardHeader } from 'reactstrap';
 import RangeSlider from '../../Common/RangeSlider';
 
 const priceMarks = {
-  1: { label: <p className='fw-normal text-black'>$1</p> },
-  500: { label: <p className='fw-normal text-black'>$500</p> }
+  0: { label: <p className='fw-normal text-black'>0</p> },
+  500000: { label: <p className='fw-normal text-black'>500000d</p> }
 };
 
 const rateMarks = {
@@ -91,8 +91,8 @@ const ProductFilter = props => {
           <div className='mx-2 mb-3'>
             <RangeSlider
               marks={priceMarks}
-              defaultValue={[1, 200]}
-              max={500}
+              defaultValue={[0, 500000]}
+              max={500000}
               onChange={v => {
                 filterProducts('price', v);
               }}
