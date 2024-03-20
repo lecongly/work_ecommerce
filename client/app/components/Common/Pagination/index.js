@@ -17,12 +17,12 @@ const Pagination = props => {
   return (
     <div className='pagination-box'>
       <ReactPaginate
-        nextLabel='next >'
+        nextLabel='Sau >'
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         marginPagesDisplayed={2}
         pageCount={totalPages} // The total number of pages.
-        previousLabel='< previous'
+        previousLabel='< Trước'
         pageClassName='page-item'
         pageLinkClassName='page-link'
         previousClassName='page-item'

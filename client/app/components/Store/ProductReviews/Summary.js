@@ -25,7 +25,7 @@ const Summary = props => {
 
   return (
     <div className='bg-white p-4 box-shadow-primary review-summary'>
-      <h2 className='mb-0'>Rating</h2>
+      <h2 className='mb-0'>Xếp Hạng</h2>
       {averageRating && (
         <div className='d-flex flex-wrap align-items-center mt-2'>
           <ReactStars
@@ -74,7 +74,7 @@ const Summary = props => {
       ) : (
         <NotFound>
           <ReviewIcon width='40' height='40' className='my-2' />
-          <p className='mb-2'>Be the first to add a review.</p>
+          <p className='mb-2'>Hãy là người đầu tiên đưa ra đánh giá.</p>
         </NotFound>
       )}
     </div>

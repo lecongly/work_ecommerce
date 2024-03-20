@@ -42,7 +42,7 @@ class Signup extends React.PureComponent {
     return (
       <div className='signup-form'>
         {isLoading && <LoadingIndicator />}
-        <h2>Sign Up</h2>
+        <h2>Đăng Ký</h2>
         <hr />
         <form onSubmit={handleSubmit} noValidate>
           <Row>
@@ -123,7 +123,7 @@ class Signup extends React.PureComponent {
             <Button
               type='submit'
               variant='primary'
-              text='Sign Up'
+              text='Đăng Ký'
               disabled={isSubmitting}
             />
             <Link className='mt-3 mt-md-0 redirect-link' to={'/login'}>

@@ -119,15 +119,15 @@ const OrderItems = props => {
                     </div>
                     <div className='d-flex justify-content-between flex-wrap d-md-none mt-1'>
                       <p className='mb-1 mr-4'>
-                        Status
+                        Trạng Thái
                         <p className='order-label order-status'>{` ${item.status}`}</p>
                       </p>
                       <p className='mb-1 mr-4'>
-                        Quantity
+                        Số Lượng
                         <p className='order-label'>{` ${item.quantity}`}</p>
                       </p>
                       <p>
-                        Total Price
+                        Tổng Giá
                         <p className='order-label'>{` $${item.totalPrice}`}</p>
                       </p>
                     </div>
@@ -136,13 +136,13 @@ const OrderItems = props => {
 
                 <div className='d-none d-md-flex justify-content-between align-items-center box'>
                   <div className='text-center'>
-                    <p>Status</p>
+                    <p>Trạng Thái</p>
                     <p className='order-label order-status'>{`${item.status}`}</p>
                   </div>
-                  <div className='text-center'><p>Quantity</p>
+                  <div className='text-center'><p>Số Lượng</p>
                     <p className='order-label'>{` ${item.quantity}`}</p>
                   </div>
-                  <div className='text-center'><p>Total Price</p>
+                  <div className='text-center'><p>Tổng Giá</p>
                     <p className='order-label'>{` $${item.totalPrice}`}</p>
                   </div>
                 </div>

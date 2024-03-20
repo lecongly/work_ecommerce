@@ -82,7 +82,7 @@ const AddProduct = props => {
             <Input
               type={'number'}
               error={formErrors['quantity']}
-              label={'Quantity'}
+              label={'Số Lượng'}
               name={'quantity'}
               decimals={false}
               placeholder={'Product Quantity'}

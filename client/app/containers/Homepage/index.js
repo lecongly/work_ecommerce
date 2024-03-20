@@ -274,10 +274,10 @@ class Homepage extends React.PureComponent {
                   </a>
                 </div>
                 <div className="service-listing-detail">
-                  <div className="service-name"><a href="https://nailroom.vn/service/mi-3/">Nailbox Thiết kế</a></div>
+                  <div className="service-name"><a href="/shop/brand/nailbox-thiet-ke">Nailbox Thiết kế</a></div>
                   <div className="shortdesc">Ở NAIL Stella hiện có dịch vụ thiết kế thủ công theo yêu cầu của khách hàng.</div>
                   <div className="booking-button">
-                    <a href="/shop" className="button-c" target="_blank">Đặt Hàng</a>
+                    <a href="/shop/brand/nailbox-thiet-ke" className="button-c" target="_blank">Đặt Hàng</a>
                   </div>
                 </div>
               </div>
@@ -296,10 +296,10 @@ class Homepage extends React.PureComponent {
                   </a>
                 </div>
                 <div className="service-listing-detail">
-                  <div className="service-name"><a href="https://nailroom.vn/service/nail/">Nailbox Có Sẵn</a></div>
+                  <div className="service-name"><a href="/shop/brand/nailbox-co-san">Nailbox Có Sẵn</a></div>
                   <div className="shortdesc">Là dịch vụ được yêu thích nhất tại NAIL Stella, với những mẫu nail độc đáo, hiện đại và không kém phần chất lượng.</div>
                   <div className="booking-button">
-                    <a href="https://www.messenger.com/t/nailroom.mitshouse" className="button-c" target="_blank">Mua Ngay</a>
+                    <a href="/shop/brand/nailbox-co-san" className="button-c" target="_blank">Mua Ngay</a>
                   </div>
                 </div>
               </div>

@@ -40,7 +40,7 @@ class MerchantSignup extends React.PureComponent {
           <Row>
             <Col xs={{ size: 12 }} md={{ size: 6, offset: 3 }} className='p-0'>
               <Col xs='12' md='12'>
-                <h2 className='text-center'>Complete Sign Up</h2>
+                <h2 className='text-center'>Đăng ký thành công!</h2>
                 <hr />
               </Col>
 
