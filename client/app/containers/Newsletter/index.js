@@ -32,7 +32,7 @@ class Newsletter extends React.PureComponent {
               type={'text'}
               error={formErrors['email']}
               name={'email'}
-              placeholder={'Please Enter Your Email'}
+              placeholder={'Vui lòng nhập email của bạn'}
               value={email}
               onInputChange={(name, value) => {
                 newsletterChange(name, value);

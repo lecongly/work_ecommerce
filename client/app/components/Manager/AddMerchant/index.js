@@ -47,7 +47,7 @@ const AddMerchant = props => {
             <Input
               type={'text'}
               error={formErrors['email']}
-              label={'Email Address'}
+              label={'Email'}
               name={'email'}
               placeholder={'Your Email Address'}
               value={merchantFormData.email}

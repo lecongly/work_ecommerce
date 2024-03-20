@@ -127,7 +127,7 @@ class Navigation extends React.PureComponent {
     } = this.props;
 
     const inputProps = {
-      placeholder: 'Search Products',
+      placeholder: 'Tìm kiếm sản phẩm',
       value: searchValue,
       onChange: (_, { newValue }) => {
         onSearch(newValue);
@@ -141,32 +141,27 @@ class Navigation extends React.PureComponent {
             <Row>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-truck' />
-                <span>Free Shipping</span>
+                <span>Miễn Phí Vận Chuyển</span>
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-credit-card' />
-                <span>Payment Methods</span>
+                <span>Thanh Toán Trực Tuyến</span>
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-phone' />
-                <span>Call us 0909-368-823</span>
+                <span>0909-368-823</span>
               </Col>
               <Col xs='12' className='text-center d-block d-md-none'>
                 <i className='fa fa-phone' />
-                <span> Need advice? Call us 0909-368-823</span>
+                <span> Bạn cần hỗ trợ? Liên hệ: 0909-368-823</span>
               </Col>
             </Row>
           </Container>
         </div>
         <Container>
           <Row className='align-items-center top-header'>
-            <Col
-              xs={{ size: 12, order: 1 }}
-              sm={{ size: 12, order: 1 }}
-              md={{ size: 3, order: 1 }}
-              lg={{ size: 3, order: 1 }}
-              className='pr-0'
-            >
+            {/* Brand Logo */}
+            <Col xs={{ size: 12, order: 1 }} sm={{ size: 12, order: 1 }} md={{ size: 3, order: 1 }} lg={{ size: 2, order: 1 }} className='pr-0'>
               <div className='brand'>
                 {categories && categories.length > 0 && (
                   <Button
@@ -178,25 +173,14 @@ class Navigation extends React.PureComponent {
                     onClick={() => this.toggleMenu()}
                   />
                 )}
-                <Link to='/'>
-                <img
-                    className='desktop'
-                    src={'/images/logo.png'}
-                  />
-                  <img
-                    className='mobile'
-                    src={'/images/logo.png'}
-                  />
+                <Link to='/home'>
+                  <img className='desktop' src='/images/logo.png' />
+                  <img className='mobile' src='/images/logo.png' />
                 </Link>
               </div>
             </Col>
-            <Col
-              xs={{ size: 12, order: 4 }}
-              sm={{ size: 12, order: 4 }}
-              md={{ size: 12, order: 4 }}
-              lg={{ size: 5, order: 2 }}
-              className='pt-2 pt-lg-0'
-            >
+            {/* Search Bar */}
+            <Col xs={{ size: 12, order: 4 }} sm={{ size: 12, order: 4 }} md={{ size: 12, order: 4 }} lg={{ size: 2, order: 2 }} className='pt-2 pt-lg-0'>
               <Autosuggest
                 suggestions={suggestions}
                 onSuggestionsFetchRequested={onSuggestionsFetchRequested}
@@ -209,13 +193,8 @@ class Navigation extends React.PureComponent {
                 }}
               />
             </Col>
-            <Col
-              xs={{ size: 12, order: 2 }}
-              sm={{ size: 12, order: 2 }}
-              md={{ size: 4, order: 1 }}
-              lg={{ size: 5, order: 3 }}
-              className='desktop-hidden'
-            >
+            {/* Menu Toggle and Cart Icon */}
+            <Col xs={{ size: 12, order: 2 }} sm={{ size: 12, order: 2 }} md={{ size: 4, order: 1 }} lg={{ size: 5, order: 3 }} className='desktop-hidden'>
               <div className='header-links'>
                 <Button
                   borderless
@@ -227,50 +206,47 @@ class Navigation extends React.PureComponent {
                 <CartIcon cartItems={cartItems} onClick={toggleCart} />
               </div>
             </Col>
-            <Col
-              xs={{ size: 12, order: 2 }}
-              sm={{ size: 12, order: 2 }}
-              md={{ size: 9, order: 1 }}
-              lg={{ size: 4, order: 3 }}
-            // className='px-0'
-            >
+            {/* Navigation Menu */}
+            <Col xs={{ size: 12, order: 2 }} sm={{ size: 12, order: 2 }} md={{ size: 9, order: 1 }} lg={{ size: 8, order: 3 }}>
               <Navbar color='light' light expand='md' className='mt-1 mt-md-0'>
-                <CartIcon
-                  className='d-none d-md-block'
-                  cartItems={cartItems}
-                  onClick={toggleCart}
-                />
                 <Nav navbar>
+                  {/* NavItems */}
+                  <NavItem>
+                    <NavLink tag={ActiveLink} to='/home' activeClassName='active'>
+                      Trang chủ
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink tag={ActiveLink} to='/introduction' activeClassName='active'>
+                      Giới thiệu
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink tag={ActiveLink} to='/blog' activeClassName='active'>
+                      Blog
+                    </NavLink>
+                  </NavItem>
+                  {/* NavItem for Shop */}
+                  <NavItem>
+                    <NavLink tag={ActiveLink} to='/shop' activeClassName='active'>
+                      Cửa hàng
+                    </NavLink>
+                  </NavItem>
+                  {/* Dropdown for Brands */}
                   {brands && brands.length > 0 && (
-                    <Dropdown
-                      nav
-                      inNavbar
-                      toggle={() => this.toggleBrand()}
-                      isOpen={isBrandOpen}
-                    >
+                    <Dropdown nav inNavbar isOpen={isBrandOpen} toggle={() => this.toggleBrand()}>
                       <DropdownToggle nav>
-                        Brands
+                        Sản phẩm
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right className='nav-brand-dropdown'>
                         <div className='mini-brand'>
-                          <MiniBrand
-                            brands={brands}
-                            toggleBrand={() => this.toggleBrand()}
-                          />
+                          <MiniBrand brands={brands} toggleBrand={() => this.toggleBrand()} />
                         </div>
                       </DropdownMenu>
                     </Dropdown>
                   )}
-                  <NavItem>
-                    <NavLink
-                      tag={ActiveLink}
-                      to='/shop'
-                      activeClassName='active'
-                    >
-                      Shop
-                    </NavLink>
-                  </NavItem>
+                  {/* Dropdown for User Authentication */}
                   {authenticated ? (
                     <UncontrolledDropdown nav inNavbar>
                       <DropdownToggle nav>
@@ -278,35 +254,36 @@ class Navigation extends React.PureComponent {
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right>
-                        <DropdownItem
-                          onClick={() => history.push('/dashboard')}
-                        >
-                          Dashboard
+                        <DropdownItem onClick={() => history.push('/dashboard')}>
+                          Quản lý tài khoản
                         </DropdownItem>
-                        <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
+                        <DropdownItem onClick={signOut}>Đăng Xuất</DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   ) : (
                     <UncontrolledDropdown nav inNavbar>
                       <DropdownToggle nav>
-                        Welcome!
+                        Chào mừng
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
                       <DropdownMenu right>
                         <DropdownItem onClick={() => history.push('/login')}>
-                          Login
+                          Đăng Nhập
                         </DropdownItem>
                         <DropdownItem onClick={() => history.push('/register')}>
-                          Sign Up
+                          Đăng Ký
                         </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   )}
                 </Nav>
+                {/* Cart Icon */}
+                <CartIcon className='d-none d-md-block' cartItems={cartItems} onClick={toggleCart} />
               </Navbar>
             </Col>
           </Row>
         </Container>
+
 
         {/* hidden cart drawer */}
         <div

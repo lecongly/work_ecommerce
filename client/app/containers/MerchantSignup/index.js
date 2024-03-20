@@ -50,7 +50,7 @@ class MerchantSignup extends React.PureComponent {
                   error={formErrors['email']}
                   label={'Email Address'}
                   name={'email'}
-                  placeholder={'Please Enter Your Email'}
+                  placeholder={'Vui lòng nhập email của bạn'}
                   value={signupFormData.email}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -63,7 +63,7 @@ class MerchantSignup extends React.PureComponent {
                   error={formErrors['firstName']}
                   label={'First Name'}
                   name={'firstName'}
-                  placeholder={'Please Enter Your First Name'}
+                  placeholder={'Vui lòng nhập tên của bạn'}
                   value={signupFormData.firstName}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -76,7 +76,7 @@ class MerchantSignup extends React.PureComponent {
                   error={formErrors['lastName']}
                   label={'Last Name'}
                   name={'lastName'}
-                  placeholder={'Please Enter Your Last Name'}
+                  placeholder={'Vui lòng nhập họ của bạn'}
                   value={signupFormData.lastName}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -89,7 +89,7 @@ class MerchantSignup extends React.PureComponent {
                   label={'Password'}
                   error={formErrors['password']}
                   name={'password'}
-                  placeholder={'Please Enter Your Password'}
+                  placeholder={'Vui lòng nhập mật khẩu của bạn'}
                   value={signupFormData.password}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);

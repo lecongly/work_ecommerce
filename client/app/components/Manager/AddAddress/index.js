@@ -69,7 +69,7 @@ const AddAddress = props => {
               error={formErrors['country']}
               label={'Country'}
               name={'country'}
-              placeholder={'Please Enter Your country'}
+              placeholder={'Vui lòng nhập quốc gia của bạn'}
               value={addressFormData.country}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -82,7 +82,7 @@ const AddAddress = props => {
               error={formErrors['zipCode']}
               label={'Zipcode'}
               name={'zipCode'}
-              placeholder={'Please Enter Your Zipcode'}
+              placeholder={'Vui lòng nhập mã vùng của bạn'}
               value={addressFormData.zipCode}
               onInputChange={(name, value) => {
                 addressChange(name, value);

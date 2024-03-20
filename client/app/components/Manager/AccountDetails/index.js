@@ -44,7 +44,7 @@ const AccountDetails = props => {
               type={'text'}
               label={'First Name'}
               name={'firstName'}
-              placeholder={'Please Enter Your First Name'}
+              placeholder={'Vui lòng nhập tên của bạn'}
               value={user.firstName ? user.firstName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -56,7 +56,7 @@ const AccountDetails = props => {
               type={'text'}
               label={'Last Name'}
               name={'lastName'}
-              placeholder={'Please Enter Your Last Name'}
+              placeholder={'Vui lòng nhập họ của bạn'}
               value={user.lastName ? user.lastName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -69,7 +69,7 @@ const AccountDetails = props => {
               type={'text'}
               label={'Email'}
               name={'email'}
-              placeholder={'Please Enter Your Email'}
+              placeholder={'Vui lòng nhập email của bạn'}
               value={user.email ? user.email : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -81,7 +81,7 @@ const AccountDetails = props => {
               type={'text'}
               label={'Phone Number'}
               name={'phoneNumber'}
-              placeholder={'Please Enter Your Phone Number'}
+              placeholder={'Xin vui lòng điền số điện thoại của bạn'}
               value={user.phoneNumber ? user.phoneNumber : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);

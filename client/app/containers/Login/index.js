@@ -43,7 +43,7 @@ class Login extends React.PureComponent {
     return (
       <div className='login-form'>
         {isLoading && <LoadingIndicator />}
-        <h2>Login</h2>
+        <h2>Đăng Nhập</h2>
         <hr />
         <form onSubmit={handleSubmit} noValidate>
           <Row>
@@ -58,7 +58,7 @@ class Login extends React.PureComponent {
                   error={formErrors['email']}
                   label={'Email Address'}
                   name={'email'}
-                  placeholder={'Please Enter Your Email'}
+                  placeholder={'Vui lòng nhập email của bạn'}
                   value={loginFormData.email}
                   onInputChange={(name, value) => {
                     loginChange(name, value);
@@ -71,7 +71,7 @@ class Login extends React.PureComponent {
                   error={formErrors['password']}
                   label={'Password'}
                   name={'password'}
-                  placeholder={'Please Enter Your Password'}
+                  placeholder={'Vui lòng nhập mật khẩu của bạn'}
                   value={loginFormData.password}
                   onInputChange={(name, value) => {
                     loginChange(name, value);
@@ -93,11 +93,11 @@ class Login extends React.PureComponent {
               <Button
                 type='submit'
                 variant='primary'
-                text='Login'
+                text='Đăng Nhập'
                 disabled={isSubmitting}
               />
               <Button
-                text='Create an account'
+                text='Tạo Tài Khoản Mới'
                 variant='link'
                 className='ml-md-3'
                 onClick={registerLink}
@@ -107,7 +107,7 @@ class Login extends React.PureComponent {
               className='redirect-link forgot-password-link'
               to={'/forgot-password'}
             >
-              Forgot Password?
+              Quên mật khẩu?
             </Link>
           </div>
         </form>
