@@ -26,8 +26,8 @@ class List extends React.PureComponent {
     return (
       <>
         <SubPage
-          title='Products'
-          actionTitle='Add'
+          title='Sản Phẩm'
+          actionTitle='THÊM'
           handleAction={() => history.push('/dashboard/product/add')}
         >
           {isLoading ? (

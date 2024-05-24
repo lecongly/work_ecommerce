@@ -153,7 +153,7 @@ class Navigation extends React.PureComponent {
               </Col>
               <Col xs='12' className='text-center d-block d-md-none'>
                 <i className='fa fa-phone' />
-                <span> Bạn cần hỗ trợ? Liên hệ: 0909-368-823</span>
+                <span>Bạn cần hỗ trợ? Liên hệ: 0909-368-823</span>
               </Col>
             </Row>
           </Container>
