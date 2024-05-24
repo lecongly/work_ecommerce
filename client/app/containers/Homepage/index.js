@@ -13,6 +13,7 @@ import actions from '../../actions';
 import banners from './banners.json';
 import CarouselSlider from '../../components/Common/CarouselSlider';
 import { responsiveOneItemCarousel } from '../../components/Common/CarouselSlider/utils';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class Homepage extends React.PureComponent {
   render() {
@@ -57,10 +58,10 @@ class Homepage extends React.PureComponent {
                 <div className="col-sm-4" data-aos="fade-up">
                   <div className="blog-item">
                     <div className="blog-image">
-                      <a href="https://nailroom.vn/2023/11/28/goi-y-nhung-set-nail-cho-mua-cuoi-2023/"><img src="https://i.etsystatic.com/13333397/r/il/078619/2035013977/il_fullxfull.2035013977_289w.jpg" alt="" /></a>
+                      <a href="/"><img src="https://i.etsystatic.com/13333397/r/il/078619/2035013977/il_fullxfull.2035013977_289w.jpg" alt="" /></a>
                     </div>
                     <div className="blog-title">
-                      <a href="https://nailroom.vn/2023/11/28/goi-y-nhung-set-nail-cho-mua-cuoi-2023/">GỢI Ý NHỮNG LOẠI KẸP TÓC HOT NHẤT 2024</a>
+                      <a href="/">GỢI Ý NHỮNG LOẠI KẸP TÓC HOT NHẤT 2024</a>
                     </div>
                     <div className="post-category">
                       <a href="https://nailroom.vn/category/tin-tuc-nailroom/">Tin tức</a>
@@ -70,26 +71,26 @@ class Homepage extends React.PureComponent {
                 <div className="col-sm-4" data-aos="fade-up">
                   <div className="blog-item">
                     <div className="blog-image">
-                      <a href="https://nailroom.vn/2023/08/22/%f0%9f%92%8c-uu-dai-dau-tuan-khuan-ngay-qua-hot-%f0%9f%92%8c/"><img src="https://popshopamerica.com/wp-content/uploads/2018/08/dip-the-barrette-in-the-glue-how-to-make-diy-seashell-hair-accessories.jpg" alt="" /></a>
+                      <a href="/"><img src="https://popshopamerica.com/wp-content/uploads/2018/08/dip-the-barrette-in-the-glue-how-to-make-diy-seashell-hair-accessories.jpg" alt="" /></a>
                     </div>
                     <div className="blog-title">
-                      <a href="https://nailroom.vn/2023/08/22/%f0%9f%92%8c-uu-dai-dau-tuan-khuan-ngay-qua-hot-%f0%9f%92%8c/">💌 ƯU ĐÃI ĐẦU TUẦN – KHUÂN NGAY QUÀ HOT 💌</a>
+                      <a href="/">💌 ƯU ĐÃI ĐẦU TUẦN – KHUÂN NGAY QUÀ HOT 💌</a>
                     </div>
                     <div className="post-category">
-                      <a href="https://nailroom.vn/category/chuong-trinh/">Chương trình</a>
+                      <a href="/">Chương trình</a>
                     </div>
                   </div>
                 </div>
                 <div className="col-sm-4" data-aos="fade-up">
                   <div className="blog-item">
                     <div className="blog-image">
-                      <a href="https://nailroom.vn/2023/03/19/%f0%9f%8c%9e-nhan-qua-sinh-nhat-check-in-cuc-chat-%f0%9f%8c%9e/"><img src="https://irepo.primecp.com/2015/06/224341/Beach-Goddess-DIY-Seashell-Clips_Large600_ID-1041798.jpg?v=1041798" alt="" /></a>
+                      <a href="/"><img src="https://irepo.primecp.com/2015/06/224341/Beach-Goddess-DIY-Seashell-Clips_Large600_ID-1041798.jpg?v=1041798" alt="" /></a>
                     </div>
                     <div className="blog-title">
-                      <a href="https://nailroom.vn/2023/03/19/%f0%9f%8c%9e-nhan-qua-sinh-nhat-check-in-cuc-chat-%f0%9f%8c%9e/">🌞 NHẬN QUÀ SINH NHẬT – CHECK-IN CỰC CHẤT 🌞</a>
+                      <a href="/">🌞 NHẬN QUÀ SINH NHẬT – CHECK-IN CỰC CHẤT 🌞</a>
                     </div>
                     <div className="post-category">
-                      <a href="https://nailroom.vn/category/chuong-trinh/">Chương trình</a>
+                      <a href="/">Chương trình</a>
                     </div>
                   </div>
                 </div>
@@ -263,7 +264,7 @@ class Homepage extends React.PureComponent {
             <div className="home-services-slick" data-aos="fade-up">
               <div className="service-item">
                 <div className="service-image">
-                  <a href="https://nailroom.vn/service/mi-3/">
+                  <Link to="/shop/brand/thietke" >
                     <img src="https://i.upanh.org/2024/05/22/2af57812-d755-47c7-9750-0af6fc09d325b53f6edfd4c7826c.jpeg" alt="2af57812-d755-47c7-9750-0af6fc09d325b53f6edfd4c7826c.jpeg" border="0" />
                     <div className="service-hover">
                       <div className="service-hover-content">
@@ -273,11 +274,11 @@ class Homepage extends React.PureComponent {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="service-listing-detail">
                   <div className="service-name"><a href="/shop/brand/thietke">Kẹp Tóc Thiết kế</a></div>
-                  <div className="shortdesc">Tại Stella Store hiện có dịch vụ thiết kế thủ công theo yêu cầu của khách hàng.</div>
+                  <div className="shortdesc" style={{height: '50px'}}>Tại Stella Store hiện có dịch vụ thiết kế thủ công theo yêu cầu của khách hàng.</div>
                   <div className="booking-button">
                     <a href="/shop/brand/thietke" className="button-c" target="_blank">Đặt Hàng</a>
                   </div>
@@ -285,7 +286,7 @@ class Homepage extends React.PureComponent {
               </div>
               <div className="service-item">
                 <div className="service-image">
-                  <a href="https://nailroom.vn/service/nail/">
+                  <Link to="/shop/brand/voso">
                     <img src="https://down-vn.img.susercontent.com/file/f0256c3fc199c977df17e01c8a1ed04c" alt="" />
                     <div className="service-hover">
                       <div className="service-hover-content">
@@ -295,11 +296,11 @@ class Homepage extends React.PureComponent {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <div className="service-listing-detail">
                   <div className="service-name"><a href="/shop/brand/voso">Kẹp Tóc Vỏ Sò Có Sẵn</a></div>
-                  <div className="shortdesc">Là dịch vụ được yêu thích nhất tại Stella Store, với những mẫu kẹp tóc độc đáo, hiện đại và không kém phần chất lượng.</div>
+                  <div className="shortdesc" style={{height: '50px'}}>Là dịch vụ được yêu thích nhất tại Stella Store, với những mẫu kẹp tóc độc đáo, hiện đại và không kém phần chất lượng.</div>
                   <div className="booking-button">
                     <a href="/shop/brand/voso" className="button-c" target="_blank">Mua Ngay</a>
                   </div>

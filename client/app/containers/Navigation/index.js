@@ -149,11 +149,11 @@ class Navigation extends React.PureComponent {
               </Col>
               <Col md='4' className='text-center d-none d-md-block'>
                 <i className='fa fa-phone' />
-                <span>0909-368-823</span>
+                <span>0862-670-781</span>
               </Col>
               <Col xs='12' className='text-center d-block d-md-none'>
                 <i className='fa fa-phone' />
-                <span>Bạn cần hỗ trợ? Liên hệ: 0909-368-823</span>
+                <span>Bạn cần hỗ trợ? Liên hệ: 0862-670-781</span>
               </Col>
             </Row>
           </Container>
@@ -208,7 +208,7 @@ class Navigation extends React.PureComponent {
             </Col>
             {/* Navigation Menu */}
             <Col xs={{ size: 12, order: 2 }} sm={{ size: 12, order: 2 }} md={{ size: 9, order: 1 }} lg={{ size: 8, order: 3 }}>
-              <Navbar color='light' light expand='md' className='mt-1 mt-md-0'>
+              <Navbar color='light' light expand='md' className='mt-1 mt-md-0 mb-0'>
                 <Nav navbar>
                   {/* NavItems */}
                   <NavItem>
