@@ -29,7 +29,7 @@ const ProductList = props => {
           />
           <div className='d-flex flex-column justify-content-center px-3 text-truncate'>
             <h4 className='text-truncate'>{product.name}</h4>
-            <p className='mb-2 text-truncate'>{product.description}</p>
+            <p className='text-truncate' dangerouslySetInnerHTML={{ __html: product.description }}></p>
           </div>
         </Link>
       ))}

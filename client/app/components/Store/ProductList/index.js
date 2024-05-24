@@ -54,7 +54,7 @@ const ProductList = props => {
                           By <span>{product.brand.name}</span>
                         </p>
                       )}
-                      <p className='item-desc mb-0'>{product.description}</p>
+                      <p className='item-desc mb-0' dangerouslySetInnerHTML={{ __html: product.description }}></p>
                     </div>
                   </div>
                   <div className='d-flex flex-row justify-content-between align-items-center px-4 mb-2 item-footer'>
