@@ -31,7 +31,7 @@ export const formatDate = date => {
   //     day: "numeric"
   //   };
 
-  return newDate.toLocaleDateString('en-US', dateOptions);
+  return newDate.toLocaleDateString('vi', dateOptions);
 };
 
 export const formatTime = date => {

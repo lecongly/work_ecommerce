@@ -212,7 +212,43 @@ export const addOrder = () => {
   };
 };
 
+export const checkout = () => {
+  return async (dispatch, getState) => {
+    try {
+      const cartId = localStorage.getItem('cart_id');
+      const total = getState().cart.cartTotal;
+
+      if (cartId) {
+        const response = await axios.post(`/api/order/checkout`, {
+          cartId,
+          total
+        });
+
+        const { checkoutUrl, success } = response.data;
+        window.location.href = checkoutUrl;
+      }
+    } catch (error) {
+      handleError(error, dispatch);
+    }
+  };
+};
+
 export const placeOrder = () => {
+   return (dispatch, getState) => {
+    const token = localStorage.getItem('token');
+
+    const cartItems = getState().cart.cartItems;
+
+    if (token && cartItems.length > 0) {
+      Promise.all([dispatch(getCartId())]).then(() => {
+        dispatch(checkout());
+      });
+    }
+  };
+
+};
+
+export const checkoutSuccess = () => {
   return (dispatch, getState) => {
     const token = localStorage.getItem('token');
 
@@ -223,8 +259,6 @@ export const placeOrder = () => {
         dispatch(addOrder());
       });
     }
-
-    dispatch(toggleCart());
   };
 };
 

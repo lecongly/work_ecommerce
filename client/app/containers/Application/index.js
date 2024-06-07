@@ -32,6 +32,7 @@ import Contact from '../Contact';
 import OrderSuccess from '../OrderSuccess';
 import OrderPage from '../OrderPage';
 import AuthSuccess from '../AuthSuccess';
+import CheckoutSuccess from '../CheckoutSuccess';
 
 import Footer from '../../components/Common/Footer';
 import Page404 from '../../components/Common/Page404';
@@ -102,6 +103,7 @@ class Application extends React.PureComponent {
                   component={ResetPassword}
                 />
                 <Route path='/auth/success' component={AuthSuccess} />
+                <Route path='/checkout/success' component={CheckoutSuccess} />
                 <Route path='/support' component={Authentication(Support)} />
                 <Route
                   path='/dashboard'

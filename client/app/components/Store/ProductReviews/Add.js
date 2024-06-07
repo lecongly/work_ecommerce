@@ -13,8 +13,8 @@ import Input from '../../Common/Input';
 import Button from '../../Common/Button';
 
 const recommedableSelect = [
-  { value: 1, label: 'Yes' },
-  { value: 0, label: 'No' }
+  { value: 1, label: 'Có' },
+  { value: 0, label: 'Không' }
 ];
 
 const Add = props => {
@@ -36,7 +36,7 @@ const Add = props => {
               error={reviewFormErrors['title']}
               label={'Tiêu đề'}
               name={'title'}
-              placeholder={'Enter Review title'}
+              placeholder={'Tiêu đề đánh giá'}
               value={reviewFormData.title}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -49,7 +49,7 @@ const Add = props => {
               error={reviewFormErrors['review']}
               label={'Bình luận'}
               name={'review'}
-              placeholder={'Write Review'}
+              placeholder={'Viết đánh giá'}
               value={reviewFormData.review}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -82,7 +82,7 @@ const Add = props => {
           </Col>
         </Row>
         <div className='mt-4'>
-          <Button type='submit' text='Đăng đánh giá' />
+          <Button type='submit' text='Đánh giá' />
         </div>
       </form>
     </div>

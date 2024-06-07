@@ -26,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@fontsource/poppins": "^4.5.9",
+    "@payos/node": "^1.0.6",
     "autosuggest-highlight": "^3.1.1",
     "aws-sdk": "^2.799.0",
     "axios": "^0.21.1",

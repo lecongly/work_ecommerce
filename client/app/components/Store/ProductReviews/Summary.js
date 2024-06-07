@@ -41,7 +41,7 @@ const Summary = props => {
             filledIcon={<i className='fa fa-star' />}
             value={averageRating}
           />
-          {totalReviews > 0 && <span>based on {totalReviews} reviews.</span>}
+          {totalReviews > 0 && <span>dựa trên {totalReviews} đánh giá.</span>}
         </div>
       )}
 
@@ -50,7 +50,7 @@ const Summary = props => {
         ratingSummary.map((r, obj) => (
           <div key={obj} className='d-flex align-items-center mb-2'>
             <div className='left'>
-              <span>{parseInt(Object.keys(r)[0])} star</span>
+              <span>{parseInt(Object.keys(r)[0])} sao</span>
             </div>
             <div className='middle'>
               <div className='bar-container'>

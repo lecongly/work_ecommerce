@@ -10,7 +10,37 @@ const auth = require('../../middleware/auth');
 const mailgun = require('../../services/mailgun');
 const store = require('../../utils/store');
 const { ROLES, CART_ITEM_STATUS } = require('../../constants');
+const payos = require('../../services/payos');
+const keys = require('../../config/keys');
 
+
+const { clientURL } = keys.app;
+
+router.post('/checkout', auth, async (req, res) => {
+  try {
+    const user = req.user._id;
+    const cart = req.body.cartId;
+    const total = req.body.total;
+    const orderCode = new Date().getTime();
+    const order = {
+      amount: total,
+      description: `Thanh toán`,
+      orderCode,
+      returnUrl: `${clientURL}/checkout/success`,
+      cancelUrl: `${clientURL}`,
+    }
+    const paymentLink = await payos.createPaymentLink(order);
+    res.status(200).json({
+      success: true,
+      checkoutUrl: paymentLink.checkoutUrl
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(400).json({
+      error: 'Yêu cầu của bạn không thể xử lý. Vui lòng thử lại.'
+    });
+  }
+});
 router.post('/add', auth, async (req, res) => {
   try {
     const cart = req.body.cartId;

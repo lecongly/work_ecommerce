@@ -37,5 +37,10 @@ module.exports = {
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     region: process.env.AWS_REGION,
     bucketName: process.env.AWS_BUCKET_NAME
+  },
+  payos: {
+    clientId: process.env.PAYOS_CLIENT_ID,
+    apiKey: process.env.PAYOS_API_KEY,
+    checksumKey: process.env.PAYOS_CHECKSUM_KEY,
   }
 };

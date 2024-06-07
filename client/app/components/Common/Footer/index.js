@@ -13,21 +13,10 @@ import Newsletter from '../../../containers/Newsletter';
 
 const Footer = () => {
   const infoLinks = [
-    { id: 0, name: 'Contact Us', to: '/contact' },
-    { id: 1, name: 'Sell With Us', to: '/sell' },
-    { id: 2, name: 'Shipping', to: '/shipping' }
+    { id: 0, name: 'Liên hệ với chúng tôi', to: '/contact' },
+    { id: 1, name: 'Bán cùng chúng tôi', to: '/sell' },
+    { id: 2, name: 'Giao hàng', to: '/shipping' }
   ];
-
-  const footerBusinessLinks = (
-    <ul className='support-links'>
-      <li className='footer-link'>
-        <Link to='/dashboard'>Account Details</Link>
-      </li>
-      <li className='footer-link'>
-        <Link to='/dashboard/orders'>Orders</Link>
-      </li>
-    </ul>
-  );
 
   const footerLinks = infoLinks.map(item => (
     <li key={item.id} className='footer-link'>
@@ -57,12 +46,12 @@ const Footer = () => {
               <ul>{footerLinks}</ul>
             </div>
           </div>
-          <div className='footer-block'>
+          {/* <div className='footer-block'>
             <div className='block-title'>
               <h3 className='text-uppercase'>Tin tức - Ưu đãi</h3>
               <Newsletter />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className='footer-copyright'>
           <span>© {new Date().getFullYear()} Stella Store</span>
