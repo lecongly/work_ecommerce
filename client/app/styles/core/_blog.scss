@@ -1,0 +1,38 @@
+.position-relative .overlay-content {
+  cursor: pointer;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box; 
+  transition: transform 0.3s ease; 
+  transform: scale(1); 
+  font-weight: bold !important; 
+  color: red !important;
+}
+.position-relative .overlay-content .content{
+
+  font-weight: bold;
+}
+
+.position-relative {
+  overflow: hidden; 
+  position: relative; 
+}
+
+.position-relative img {
+  width: 100%; 
+  transition: transform 0.3s ease; 
+}
+.position-relative .img-fluid1 {
+  width: 100%;
+  height: 340px;
+}
+
+.position-relative:hover .overlay-content {
+  transform: scale(1.1); 
+}
+
+.position-relative:hover img {
+  transform: scale(1.1); 
+}

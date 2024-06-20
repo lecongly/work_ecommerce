@@ -33,7 +33,9 @@ import OrderSuccess from '../OrderSuccess';
 import OrderPage from '../OrderPage';
 import AuthSuccess from '../AuthSuccess';
 import CheckoutSuccess from '../CheckoutSuccess';
-
+import Introduction from '../Introduction';
+import Blog from '../Blog';
+import BlogDetails from '../BlogDetails';
 import Footer from '../../components/Common/Footer';
 import Page404 from '../../components/Common/Page404';
 import { CART_ITEMS } from '../../constants';
@@ -84,6 +86,9 @@ class Application extends React.PureComponent {
               <Switch>
                 <Route exact path='/' component={HomePage} />
                 <Route exact path='/home' component={HomePage} />
+                <Route path='/introduction' component={Introduction}/>
+                <Route exact path="/blog" component={Blog} />
+                <Route path="/blog/:id" component={BlogDetails} />
                 <Route path='/shop' component={Shop} />
                 <Route path='/sell' component={Sell} />
                 <Route path='/contact' component={Contact} />
