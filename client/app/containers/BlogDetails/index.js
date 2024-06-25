@@ -20,6 +20,7 @@ const BlogDetails = () => {
                         mái tóc. Kẹp tóc custom đính chữ cũng là món quà ý nghĩa dành tặng cho bạn bè, người
                         thân hoặc chính bản thân mình.
                     </p>
+                   
                     <h2>Tại sao nên chọn kẹp tóc custom đính chữ của Stella?</h2>
                     <p>
                         <strong>Thể hiện cá tính riêng:</strong> Kẹp tóc custom đính chữ là phụ kiện độc đáo
@@ -359,6 +360,7 @@ const BlogDetails = () => {
                     <p>
                     Stella mang đến cho bạn những lựa chọn phụ kiện tóc thời trang đa dạng và đẳng cấp, phù hợp cho mọi dịp và phong cách cá nhân. Hãy khám phá bộ sưu tập của Stella ngay hôm nay để tìm ra chiếc kẹp tóc hoàn hảo nhất, từ những chiếc kẹp vỏ sò độc đáo đến những chiếc kẹp tóc custom thú vị, làm nổi bật vẻ đẹp tự nhiên và sự cá tính của bạn trong mọi thời điểm.
                     </p>
+                   
                    
                     <p className='text'>
                         <strong>Stella - Kẹp Handmade Đà Nẵng</strong>
