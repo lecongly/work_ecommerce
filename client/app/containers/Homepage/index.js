@@ -58,7 +58,7 @@ class Homepage extends React.PureComponent {
                 <div className="col-sm-4" data-aos="fade-up">
                   <div className="blog-item">
                     <div className="blog-image">
-                      <a href="/"><img src="https://i.etsystatic.com/13333397/r/il/078619/2035013977/il_fullxfull.2035013977_289w.jpg" alt="" /></a>
+                      <a href="/"><img src="https://i.etsystatic.com/13333397/r/il/078619/2035013977/il_fullxfull.2035013977_289w.jpg" alt="" style={{ width: '300px', height: '300px', objectFit: 'cover' }} /></a>
                     </div>
                     <div className="blog-title">
                       <a href="/">GỢI Ý NHỮNG LOẠI KẸP TÓC HOT NHẤT 2024</a>
@@ -71,7 +71,7 @@ class Homepage extends React.PureComponent {
                 <div className="col-sm-4" data-aos="fade-up">
                   <div className="blog-item">
                     <div className="blog-image">
-                      <a href="/"><img src="https://popshopamerica.com/wp-content/uploads/2018/08/dip-the-barrette-in-the-glue-how-to-make-diy-seashell-hair-accessories.jpg" alt="" /></a>
+                      <a href="/"><img src="https://popshopamerica.com/wp-content/uploads/2018/08/dip-the-barrette-in-the-glue-how-to-make-diy-seashell-hair-accessories.jpg" alt="" style={{ width: '300px', height: '300px', objectFit: 'cover' }} /></a>
                     </div>
                     <div className="blog-title">
                       <a href="/">💌 ƯU ĐÃI ĐẦU TUẦN – KHUÂN NGAY QUÀ HOT 💌</a>
@@ -84,7 +84,7 @@ class Homepage extends React.PureComponent {
                 <div className="col-sm-4" data-aos="fade-up">
                   <div className="blog-item">
                     <div className="blog-image">
-                      <a href="/"><img src="https://irepo.primecp.com/2015/06/224341/Beach-Goddess-DIY-Seashell-Clips_Large600_ID-1041798.jpg?v=1041798" alt="" /></a>
+                      <a href="/"><img src="https://irepo.primecp.com/2015/06/224341/Beach-Goddess-DIY-Seashell-Clips_Large600_ID-1041798.jpg?v=1041798" alt="" style={{ width: '300px', height: '300px', objectFit: 'cover' }} /></a>
                     </div>
                     <div className="blog-title">
                       <a href="/">🌞 NHẬN QUÀ SINH NHẬT – CHECK-IN CỰC CHẤT 🌞</a>
@@ -98,7 +98,8 @@ class Homepage extends React.PureComponent {
             </div>
           </div>
         </section>
-        <section id="clients" className="center" style={{ backgroundImage: 'url(https://nailroom.vn/wp-content/uploads/2019/09/Background_BW.jpg)' }}>
+
+        <section id="clients" className="center" style={{ backgroundImage: 'url(/images/blog/blog1.jpg)' }}>
           <div className="container">
             <h2 className="section-title revert" data-aos="fade-up"><span>KHÁCH HÀNG CỦA Stella</span></h2>
             <div className="home-clients">
@@ -231,7 +232,7 @@ class Homepage extends React.PureComponent {
                 <div className="home-test-image"><img src="https://nailroom.vn/wp-content/uploads/bfi_thumb/Feedback5-odlxx94fympi2xcvrdf46s75inom5nu8y6b3itwkiw.png" alt="" /></div>
               </div>
               <div className="home-test-item" data-aos="fade-up">
-              <div className="home-test-content">Mình mua kẹp tóc 3 lần ở Stella đều mua với chị Ngọc. Tiệm đẹp, nhân viên nhẹ nhàng, dễ thương, đi đúng giờ hay gặp người nổi tiếng =)))))
+                <div className="home-test-content">Mình mua kẹp tóc 3 lần ở Stella đều mua với chị Ngọc. Tiệm đẹp, nhân viên nhẹ nhàng, dễ thương, đi đúng giờ hay gặp người nổi tiếng =)))))
                 </div>
                 <div className="home-test-name">Vũ Thảo - Hà Nội</div>
                 <div className="home-test-image"><img src="https://nailroom.vn/wp-content/uploads/bfi_thumb/Feedback2-odlxxb04cas2q5a5ge8dbrq2pffcl21pmfm2hdts6g.png" alt="" /></div>
@@ -278,7 +279,7 @@ class Homepage extends React.PureComponent {
                 </div>
                 <div className="service-listing-detail">
                   <div className="service-name"><a href="/shop/brand/thietke">Kẹp Tóc Thiết kế</a></div>
-                  <div className="shortdesc" style={{height: '50px'}}>Tại Stella Store hiện có dịch vụ thiết kế thủ công theo yêu cầu của khách hàng.</div>
+                  <div className="shortdesc" style={{ height: '50px' }}>Tại Stella Store hiện có dịch vụ thiết kế thủ công theo yêu cầu của khách hàng.</div>
                   <div className="booking-button">
                     <a href="/shop/brand/thietke" className="button-c" target="_blank">Đặt Hàng</a>
                   </div>
@@ -300,7 +301,7 @@ class Homepage extends React.PureComponent {
                 </div>
                 <div className="service-listing-detail">
                   <div className="service-name"><a href="/shop/brand/voso">Kẹp Tóc Vỏ Sò Có Sẵn</a></div>
-                  <div className="shortdesc" style={{height: '50px'}}>Là dịch vụ được yêu thích nhất tại Stella Store, với những mẫu kẹp tóc độc đáo, hiện đại và không kém phần chất lượng.</div>
+                  <div className="shortdesc" style={{ height: '50px' }}>Là dịch vụ được yêu thích nhất tại Stella Store, với những mẫu kẹp tóc độc đáo, hiện đại và không kém phần chất lượng.</div>
                   <div className="booking-button">
                     <a href="/shop/brand/voso" className="button-c" target="_blank">Mua Ngay</a>
                   </div>
@@ -309,7 +310,7 @@ class Homepage extends React.PureComponent {
             </div>
           </div>
         </section>
-        <section id="academy">
+        {/* <section id="academy">
           <div className="container">
             <div className="academy-image" data-aos="fade-up">
               <img src="https://nailroom.vn/wp-content/uploads/2019/09/Học-viện-NR.png" alt="" />
@@ -334,8 +335,8 @@ class Homepage extends React.PureComponent {
               </div>
             </div>
           </div>
-        </section>
-        <section id="partner">
+        </section> */}
+        {/* <section id="partner">
           <div className="container">
             <div className="partner-slick" data-aos="fade-up">
               <div className="partner">
@@ -361,18 +362,18 @@ class Homepage extends React.PureComponent {
               </div>
             </div>
           </div>
-        </section>
-        <section id="calltoaction">
+        </section> */}
+        {/* <section id="calltoaction">
           <div className="container">
-            <div className="cta-content" data-aos="fade-up" style={{ backgroundImage: 'url("https://nailroom.vn/wp-content/uploads/2019/09/Banner1.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              <h2><span style={{ color: '#b7752b' }}>Mua sắm trực Tuyến</span></h2>
+            <div className="cta-content" data-aos="fade-up" style={{ backgroundImage: 'url(/images/blog/blog3.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <h2><span >Mua sắm trực Tuyến</span></h2>
               <p>HƯỞNG NGAY ƯU ĐÃI</p>
               <div className="cta-booking center">
                 <a href="https://book.nailroom.vn" className="button-a" target="_blank">SHOPPING ONLINE</a>
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     );
   }
