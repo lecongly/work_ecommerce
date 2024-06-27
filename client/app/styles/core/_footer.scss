@@ -1,4 +1,3 @@
-// footer styles
 .footer {
   flex-shrink: 0;
   border-top: $border-default;
@@ -51,12 +50,19 @@
   }
 }
 
-/*
- * Social Icons
- */
+
+
+.social-text {
+  display: inline-block;
+ 
+  margin-left: 5px; /* Khoảng cách giữa icon và chữ */
+  font-weight: bold; /* Font chữ đậm */
+}
 
 .footer-social-item {
   text-align: center;
+  margin-right: 250px;
+  
   span,
   a {
     display: inline-block;
@@ -66,6 +72,14 @@
       opacity: 0.8;
     }
   }
+  span , a , span {
+    display: flex;
+    
+  }
+  span , a , span , .social-text{
+    
+  }
+  
 
   li {
     padding-bottom: 8px;
