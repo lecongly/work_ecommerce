@@ -135,7 +135,7 @@ class Navigation extends React.PureComponent {
     };
 
     return (
-      <header className='header fixed-mobile-header'>
+      <header className='header fixed-mobile-header' style={{zIndex: 99}}>
         <div className='header-info'>
           <Container>
             <Row>
