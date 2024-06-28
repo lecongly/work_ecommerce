@@ -41,8 +41,8 @@ const Introduction = () => {
         </div>
       </div>
       <div className='d-flex w-100 justify-content-center mb-5'>
-        <div className='w-50 p-3'>
-          <img src='http://localhost:8080/images/banners/banner-2.jpg' alt='Stella Store' className='img-fluid' />
+        <div className='w-50'>
+          <img style={{width: '100%', height:'100%'}} src='/images/banners/banner-2.jpg' alt='Stella Store' className='img-fluid' />
         </div>
         <div className='w-50 p-5 bg-white'>
           <div>
@@ -72,7 +72,7 @@ const Introduction = () => {
           </div>
           <div className='col-md-4'>
             <img
-              src='http://localhost:8080/images/banners/banner-3.jpg'
+              src='/images/banners/banner-3.jpg'
               alt='Stella Store'
               className='img-fluid equal-image'
             />

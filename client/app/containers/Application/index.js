@@ -80,7 +80,7 @@ class Application extends React.PureComponent {
       <div className='application'>
         <Notification />
         <Navigation />
-        <main className='main'>
+        <main className='main' style={{zIndex: -1 }}>
           <Container>
             <div className='wrapper'>
               <Switch>

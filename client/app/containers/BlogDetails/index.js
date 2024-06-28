@@ -20,7 +20,7 @@ const BlogDetails = () => {
                         mái tóc. Kẹp tóc custom đính chữ cũng là món quà ý nghĩa dành tặng cho bạn bè, người
                         thân hoặc chính bản thân mình.
                     </p>
-                   
+
                     <h2>Tại sao nên chọn kẹp tóc custom đính chữ của Stella?</h2>
                     <p>
                         <strong>Thể hiện cá tính riêng:</strong> Kẹp tóc custom đính chữ là phụ kiện độc đáo
@@ -342,7 +342,7 @@ const BlogDetails = () => {
                         Phụ kiện tóc là một cách đơn giản và phong cách để nâng cao mọi diện mạo. Cho dù bạn đang chuẩn bị trang phục cho một sự kiện đặc biệt hay chỉ muốn thêm chút tinh tế cho phong cách hàng ngày của mình, phụ kiện tóc phù hợp có thể tạo nên sự khác biệt.
 
                     </p>
-                    
+
                     <p>
                     Các sản phẩm kẹp tóc handmade của Stella là một lựa chọn tuyệt vời cho những ai đang tìm kiếm phong cách cá nhân, độc đáo. Dưới đây là một số lời khuyên để bạn có thể chọn được kẹp tóc phù hợp cho từng sự kiện:
 
@@ -352,7 +352,7 @@ const BlogDetails = () => {
                         <li><strong>Các Sự Kiện Trang Trọng:</strong> Chọn những chiếc kẹp tóc vỏ sò từ Stella với thiết kế được trang trí bằng ngọc trai hoặc các vỏ sò nổi bật. Những thiết kế tinh xảo này sẽ là điểm nhấn hoàn hảo cho những kiểu tóc và những bộ trang phục thanh lịch. </li>
                         <li><strong>Các Buổi Đi Chơi Thường Ngày:</strong> Lựa chọn những chiếc kẹp tóc customs để tăng phần cá tính cho phong cách ăn mặc hàng ngày của bạn. Có thể chọn các từ có ý nghĩa đặc biệt để thể hiện cá tính và phong cách riêng của bạn một cách dễ dàng.
                         </li>
-                        <li><strong>Công Sở:</strong> Chọn những chiếc kẹp tóc vỏ sò đơn giản hoặc những chiếc kẹp tóc customs với gam màu sắc trung tính như trắng hoặc màu be để mang đến vẻ ngoài thanh lịch và chuyên nghiệp. 
+                        <li><strong>Công Sở:</strong> Chọn những chiếc kẹp tóc vỏ sò đơn giản hoặc những chiếc kẹp tóc customs với gam màu sắc trung tính như trắng hoặc màu be để mang đến vẻ ngoài thanh lịch và chuyên nghiệp.
                         </li>
                         <li><strong>Các Dịp Đặc Biệt:</strong> Tạo nên những món quà khác biệt nhưng cũng đầy ý nghĩa và đáng nhớ với kẹp tóc customs trong các dịp đặc biệt như đám cưới, sinh nhật hay kỉ niệm.</li>
                     </ul>
@@ -360,8 +360,8 @@ const BlogDetails = () => {
                     <p>
                     Stella mang đến cho bạn những lựa chọn phụ kiện tóc thời trang đa dạng và đẳng cấp, phù hợp cho mọi dịp và phong cách cá nhân. Hãy khám phá bộ sưu tập của Stella ngay hôm nay để tìm ra chiếc kẹp tóc hoàn hảo nhất, từ những chiếc kẹp vỏ sò độc đáo đến những chiếc kẹp tóc custom thú vị, làm nổi bật vẻ đẹp tự nhiên và sự cá tính của bạn trong mọi thời điểm.
                     </p>
-                   
-                   
+
+
                     <p className='text'>
                         <strong>Stella - Kẹp Handmade Đà Nẵng</strong>
                         <br />
@@ -386,6 +386,9 @@ const BlogDetails = () => {
         return (
             <div>
                 <h1>{blogs[id].title}</h1>
+                <div className='d-flex justify-content-center'>
+                    <img style={{width: '500px'}} src={`/images/blog/blog${id}.jpg`} alt='image'/>
+                </div>
                 {blogs[id].content}
             </div>
         );
