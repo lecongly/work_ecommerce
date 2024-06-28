@@ -1,58 +1,21 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-const Introduction = () => {
-  useEffect(() => {
-    // Function to adjust image heights to be equal within each row
-    const adjustImageHeights = () => {
-      const rows = document.querySelectorAll('.row-equal-heights');
-      rows.forEach(row => {
-        let maxHeight = 0;
-        // Find the maximum height in the current row
-        row.querySelectorAll('.equal-image').forEach(img => {
-          const height = img.offsetHeight;
-          if (height > maxHeight) {
-            maxHeight = height;
-          }
-        });
-        // Set all images in the row to have the maximum height
-        row.querySelectorAll('.equal-image').forEach(img => {
-          img.style.height = `${maxHeight}px`;
-        });
-      });
-    };
-
-    // Adjust image heights on initial load and window resize
-    adjustImageHeights();
-    window.addEventListener('resize', adjustImageHeights);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener('resize', adjustImageHeights);
-    };
-  }, []);
-
+function Introduction() {
   return (
-    <div className='container-fluid d-flex flex-column align-items-center py-4' style={{ minHeight: '100vh' }}>
-      <div className='text-center mb-4'>
-        <p className='display-4 font-weight-bold text-white'>Stella Store</p>
-        <div style={{ fontSize: '1.5em' }}> {/* Điều chỉnh kích thước chữ ở đây */}
-          <p style={{ fontSize: '1.2em' }}>ĐẾN VỚI STELLA</p>
-          <span style={{ fontSize: '1.2em' }}>"AI CŨNG CÓ THỂ TRỞ NÊN SANG CHẢNH,ĐIỆU ĐÀ HƠN"</span>
-        </div>
-      </div>
-      <div className='d-flex w-100 justify-content-center mb-5'>
-        <div className='w-50'>
-          <img style={{width: '100%', height:'100%'}} src='/images/banners/banner-2.jpg' alt='Stella Store' className='img-fluid' />
-        </div>
-        <div className='w-50 p-5 bg-white'>
-          <div>
-            <h2>Hãy ghé chơi với chúng mình để cảm nhận niềm vui từ việc yêu chiều bản thân nhé!</h2>
-            <p>Tự tay thiết kế ra các mẫu kẹp tóc thời trang, khách hàng có thể yêu cầu tên tùy thích. Với các thành viên trong nhóm có tay nghề sẽ làm ra sản phẩm chất lượng và đáng tin cậy.</p>
-          </div>
-        </div>
-      </div>
-      <div style={{ fontSize: '1.5em' }} className='text-center'>
-        <p style={{ fontSize: '1.2em' }}>CÙNG NHAU TẬN HƯỞNG NHỮNG KHOẢNG KHẮC THẬT ĐẸP TẠI STELLA STORE!</p>
+    <div>
+      <div>
+        <h1>Giới thiệu về Stella</h1>
+        <p> <strong className='slogan'>Stella</strong> được thành lập vào tháng 5 năm 2024, với sứ mệnh biến kẹp tóc thành những phụ kiện thời trang độc đáo, mang đậm dấu ấn cá nhân. Chúng tôi tin rằng kẹp tóc không chỉ đơn thuần là vật dụng hữu ích để cố định mái tóc mà còn là điểm nhấn tô điểm cho vẻ ngoài của mỗi người, thể hiện phong cách và cá tính riêng.</p>
+        <p>Ngay từ những ngày đầu thành lập, Stella đã tập trung xây dựng các kênh truyền thông xã hội như Facebook, Instagram và Tiktok để giới thiệu sản phẩm và xây dựng thương hiệu. Chúng tôi không ngừng sáng tạo nội dung thu hút, chia sẻ những bí quyết làm dưỡng tóc và phối đồ với kẹp tóc, đồng thời tương tác trực tiếp với khách hàng để thấu hiểu nhu cầu và sở thích của họ.</p>
+        <p>Song song với việc phát triển thương hiệu, Stella cũng đối mặt với nhiều thách thức trong giai đoạn đầu, đặc biệt là việc xây dựng nhận thức về thương hiệu và thu hút khách hàng trong một thị trường cạnh tranh. Tuy nhiên, với niềm đam mê và sự nỗ lực không ngừng nghỉ, chúng tôi đã từng bước khẳng định vị thế của mình trên thị trường kẹp tóc.</p>
+        <p>Stella đã tập trung vào việc cải thiện chất lượng sản phẩm, dịch vụ và triển khai các chiến lược tiếp thị hiệu quả. Chúng tôi luôn cập nhật xu hướng thời trang mới nhất để cho ra đời những mẫu kẹp tóc độc đáo, đáp ứng nhu cầu đa dạng của khách hàng. Đồng thời, Stella cũng chú trọng vào việc nâng cao trải nghiệm mua sắm cho khách hàng thông qua website dễ sử dụng, chính sách thanh toán linh hoạt và dịch vụ khách hàng chuyên nghiệp.</p>
+        <p>Nhờ những nỗ lực không ngừng nghỉ, Stella đã dần khẳng định được vị thế của mình trong thị trường kẹp tóc. Chúng tôi đã thu hút được lượng khách hàng ngày càng đông đảo và nhận được nhiều đánh giá tích cực từ khách hàng. Stella luôn trân trọng sự ủng hộ của quý khách hàng và cam kết tiếp tục mang đến những sản phẩm chất lượng cao cùng trải nghiệm mua sắm tuyệt vời.</p>
+        <p>Hành trình của Stella chỉ mới bắt đầu. Với đội ngũ nhân viên trẻ trung, năng động và đầy nhiệt huyết, cùng chiến lược phát triển rõ ràng, Stella tin tưởng sẽ tiếp tục chinh phục thị trường và trở thành thương hiệu kẹp tóc hàng đầu Việt Nam. Chúng tôi mong muốn góp phần mang đến những sản phẩm thời trang chất lượng, giúp mỗi người phụ nữ tự tin thể hiện phong cách cá nhân và tỏa sáng.</p>
+        <h2>Slogan: Nâng tầm mái tóc, khẳng định cá tính</h2>
+        <h2>Sứ mệnh</h2>
+        <p>Stella, với sứ mệnh mang đến cho khách hàng những sản phẩm đẹp mắt cùng dịch vụ chất lượng. Mục tiêu của chúng tôi không chỉ dừng lại ở việc cung cấp những chiếc kẹp tóc thông thường, mà còn mang đến trải nghiệm mua sắm trọn vẹn, tạo thêm giá trị tinh thần và khơi nguồn cảm hứng cho khách hàng. Stella mong muốn trở thành điểm đến lý tưởng cho mọi khách hàng yêu thích phong cách độc đáo và đang tìm kiếm những chiếc kẹp custom hay kẹp vỏ sò tinh xảo.</p>
+        <h2>Tầm nhìn</h2>
+        <p>Stella sẽ phấn đấu trở thành một trong những đơn vị bán kẹp tóc hàng đầu tại Đà Nẵng. Với tâm huyết và nỗ lực không ngừng nghỉ, chúng tôi mong muốn mang đến cho khách hàng không chỉ những sản phẩm kẹp tóc chất lượng, mà còn là trải nghiệm mua sắm thoải mái và hài lòng nhất.</p>
       </div>
       <div className='container mt-5'>
         <div className='row no-gutters row-equal-heights'> {/* Thêm class row-equal-heights để áp dụng cho các hàng */}
@@ -127,6 +90,6 @@ const Introduction = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Introduction;
