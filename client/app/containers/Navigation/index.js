@@ -135,7 +135,7 @@ class Navigation extends React.PureComponent {
     };
 
     return (
-      <header className='header fixed-mobile-header' style={{zIndex: 99}}>
+      <header className='header fixed-mobile-header' style={{ zIndex: 99 }}>
         <div className='header-info'>
           <Container>
             <Row>
@@ -208,34 +208,34 @@ class Navigation extends React.PureComponent {
             </Col>
             {/* Navigation Menu */}
             <Col xs={{ size: 12, order: 2 }} sm={{ size: 12, order: 2 }} md={{ size: 9, order: 1 }} lg={{ size: 8, order: 3 }}>
-              <Navbar color='light' light expand='md' className='mt-1 mt-md-0 mb-0'>
+              <Navbar color='light' light expand='md' className='mt-1 mt-md-0 mb-0 custom-navbar'>
                 <Nav navbar>
                   {/* NavItems */}
                   <NavItem>
-                    <NavLink tag={ActiveLink} to='/home' activeClassName='active'>
+                    <NavLink tag={ActiveLink} to='/home' activeClassName='active' className='nav-link-custom'>
                       Trang chủ
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink tag={ActiveLink} to='/introduction' activeClassName='active'>
+                    <NavLink tag={ActiveLink} to='/introduction' activeClassName='active' className='nav-link-custom'>
                       Giới thiệu
                     </NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink tag={ActiveLink} to='/blog' activeClassName='active'>
+                    <NavLink tag={ActiveLink} to='/blog' activeClassName='active' className='nav-link-custom'>
                       Blog
                     </NavLink>
                   </NavItem>
-                  {/* NavItem for Shop */}
                   <NavItem>
-                    <NavLink tag={ActiveLink} to='/shop' activeClassName='active'>
+                    <NavLink tag={ActiveLink} to='/shop' activeClassName='active' className='nav-link-custom'>
                       Cửa hàng
                     </NavLink>
                   </NavItem>
+
                   {/* Dropdown for Brands */}
                   {brands && brands.length > 0 && (
                     <Dropdown nav inNavbar isOpen={isBrandOpen} toggle={() => this.toggleBrand()}>
-                      <DropdownToggle nav>
+                      <DropdownToggle nav className='nav-link-custom'>
                         Sản phẩm
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
@@ -262,7 +262,7 @@ class Navigation extends React.PureComponent {
                     </UncontrolledDropdown>
                   ) : (
                     <UncontrolledDropdown nav inNavbar>
-                      <DropdownToggle nav>
+                      <DropdownToggle nav className='nav-link-custom'>
                         Chào mừng
                         <span className='fa fa-chevron-down dropdown-caret'></span>
                       </DropdownToggle>
@@ -279,6 +279,9 @@ class Navigation extends React.PureComponent {
                 </Nav>
                 {/* Cart Icon */}
                 <CartIcon className='d-none d-md-block' cartItems={cartItems} onClick={toggleCart} />
+
+
+
               </Navbar>
             </Col>
           </Row>
